@@ -26,6 +26,16 @@ The project explores how conversational interfaces can simplify common tasks whi
 
 ## Architecture
 
+```mermaid
+flowchart TD
+    A["Android App - Flutter"] <--> B["Python / FastAPI Backend"]
+    A --> C["Encrypted Local Storage"]
+    B --> D["Authentication & Encrypted Backups"]
+    B <--> E["AI Service"]
+    E -. "Action suggestions" .-> B
+    A --> F["Validation & User Confirmation"]
+```
+
 The application separates three main responsibilities:
 
 1. **Android client:** User interface, local information and offline functionality.
